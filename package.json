@@ -21,7 +21,9 @@
     "build": "tsc -p . && node scripts/copy-files.js",
     "watch": "tsc -w -p .",
     "clean": "rimraf ./dist",
-    "test": "c8 mocha \"dist/**/*.spec.js\""
+    "test": "c8 mocha \"dist/**/*.spec.js\"",
+    "pretest-single-spec": "npm run build",
+    "test-single-spec": "mocha"
   },
   "keywords": [
     "office 365",
